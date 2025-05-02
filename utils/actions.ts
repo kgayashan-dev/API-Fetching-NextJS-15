@@ -1,7 +1,4 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-// lib/auth.ts
-
-// Update this to match your API URL
 const API_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
 /**

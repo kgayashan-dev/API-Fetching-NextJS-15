@@ -30,11 +30,8 @@ export default function LoginPage() {
       setIsLoading(false);
       return;
     }
-
     try {
       const result = await login(username, password);
-
-      console.log(result);
       if (result.success) {
         router.push("/dashboard");
       } else {
@@ -106,11 +103,7 @@ export default function LoginPage() {
                 disabled={isLoading}
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
               />
-              {/* {state?.errors?.username && (
-                <p className="mt-2 text-sm text-red-600">
-                  {state.errors.username.join(", ")}
-                </p>
-              )} */}
+            
             </div>
 
             <div className="relative">
@@ -146,15 +139,11 @@ export default function LoginPage() {
                   )}
                 </button>
               </div>
-              {/* {state?.errors?.password && (
-                <p className="mt-2 text-sm text-red-600">
-                  {state.errors.password.join(", ")}
-                </p>
-              )} */}
+             
             </div>
           </div>
 
-          <div className="flex items-center justify-between">
+          {/* <div className="flex items-center justify-between">
             <div className="flex items-center">
               <input
                 id="remember-me"
@@ -169,7 +158,7 @@ export default function LoginPage() {
                 Remember me
               </label>
             </div>
-          </div>
+          </div> */}
 
           <div>
             <button
@@ -211,7 +200,7 @@ export default function LoginPage() {
         </form>
 
         <div className="text-center text-sm text-gray-600">
-          Dont have an account?{" "}
+          Don&nbsp;t have an account?{" "}
           <Link
             href="/register"
             className="font-medium text-blue-600 hover:text-blue-500"
